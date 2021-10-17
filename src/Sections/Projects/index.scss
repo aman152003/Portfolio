@@ -1,0 +1,17 @@
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  scroll-margin-top: 10vh;
+  @media (max-width: 972px) {
+    margin-top: var(--margin-tablet);
+  }
+  @media (max-width: 500px) {
+    margin-top: var(--margin-mobile);
+  }
+  h2 {
+    color: var(--title-color);
+  }
+}

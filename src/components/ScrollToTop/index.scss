@@ -1,0 +1,19 @@
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--title-color);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  position: fixed;
+  bottom: 10vh;
+  right: 5vw;
+  i {
+    font-size: var(--icon-size);
+    color: var(--container-color);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

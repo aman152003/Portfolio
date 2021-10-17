@@ -1,0 +1,26 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: var(--margin-desktop);
+  padding: var(--padding-desktop);
+  border-radius: 1rem;
+  scroll-margin-top: 10vh;
+  background-color: var(--primary-color);
+  @media (max-width: 972px) {
+    margin-top: var(--margin-tablet);
+  }
+  @media (max-width: 500px) {
+    margin-top: var(--margin-mobile);
+    padding: var(--padding-mobile);
+  }
+  h2 {
+    color: white;
+  }
+  p {
+    color: white;
+  }
+  .about-btn {
+    margin-top: 2rem;
+  }
+}

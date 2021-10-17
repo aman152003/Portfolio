@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import { ThemeProvider } from "styled-components";
 
-function App() {
+import "./App.scss";
+import { AppContext } from "./components/context";
+import { GlobalStyles } from "./theme";
+import { lightTheme } from "./theme";
+import { darkTheme } from "./theme";
+import ScrollToTop from "./components/ScrollToTop";
+import MobileNav from "./components/MobileNav";
+import Navbar from "./components/Navbar";
+import Home from "./Sections/Home";
+import About from "./Sections/About";
+import Skills from "./Sections/Skills";
+import Projects from "./Sections/Projects";
+import Contact from "./Sections/Contact";
+import Footer from "./components/Footer";
+
+const App = () => {
+  const { isDarkModeOn } = useContext(AppContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={isDarkModeOn ? darkTheme : lightTheme}>
+      <GlobalStyles />
+      <div className="app-container">
+        <ScrollToTop />
+        <MobileNav />
+        <Navbar />
+        <div className="app">
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
