@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./index.scss";
+import { StyledSkills } from "./styled-skills";
 
 const Skills = () => {
   return (
-    <section id="skills">
+    <StyledSkills id="skills">
       <h2>Skills</h2>
       <div className="skills-list">
         <ul className="skills-list-left">
@@ -18,13 +18,13 @@ const Skills = () => {
         <ul className="skills-list-right">
           <li>Responsive Design</li>
           <li>Material Ui</li>
+          <li>Styled Components</li>
           <li>Node.js</li>
           <li>Express</li>
           <li>MongoDB</li>
-          <li>Firebase</li>
         </ul>
       </div>
-    </section>
+    </StyledSkills>
   );
 };
 

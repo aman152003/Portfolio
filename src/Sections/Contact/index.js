@@ -1,21 +1,23 @@
 import React from "react";
+import { useTheme } from "styled-components";
 
-import "./index.scss";
+import { StyledContact } from "./styled-contact";
 import Button from "../../components/Button";
 
 const Contact = () => {
+  const theme = useTheme();
   return (
-    <section id="contact">
+    <StyledContact id="contact">
       <h2>Get In Touch</h2>
       <p>
-        Feel free to send me an email any time, whether it is about freelance
-        work or a project or just to talk about web development. I'll get back
-        to you as soon as possible.
+        Feel free to send me an email any time, whether it is about work or a
+        project or just to talk about web development. I'll get back to you as
+        soon as possible.
       </p>
       <div className="contact-btn">
         <Button
-          bgColor="var(--primary-color)"
-          textColor="var(--container-color)"
+          bgColor={theme.primaryColor}
+          textColor="#fff"
           text="Say Hi!"
           link="mailto:amandeepbisht644@gmail.com"
         />
@@ -43,7 +45,7 @@ const Contact = () => {
           <i className="uil uil-twitter-alt"></i>
         </a>
       </div>
-    </section>
+    </StyledContact>
   );
 };
 

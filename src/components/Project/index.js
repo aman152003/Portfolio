@@ -1,11 +1,13 @@
 import React from "react";
+import { useTheme } from "styled-components";
 
-import "./index.scss";
+import { StyledProject } from "./styled-project";
 import Button from "../Button";
 
-const Project = ({ name, about, tools }) => {
+const Project = ({ name, about, tools, github, live }) => {
+  const theme = useTheme();
   return (
-    <div className="project">
+    <StyledProject>
       <h3>{name}</h3>
       <p>{about}</p>
       <ul className="project-tools">
@@ -16,22 +18,24 @@ const Project = ({ name, about, tools }) => {
       <div className="project-btns">
         <div className="project-live-btn">
           <Button
-            bgColor="var(--primary-color)"
-            textColor="var(--container-color)"
+            bgColor={theme.primaryColor}
+            textColor="#fff"
             text="Live"
             icon="uil uil-arrow-up-right"
+            link={live}
           />
         </div>
         <div className="project-github-btn">
           <Button
-            bgColor="var(--text-color)"
-            textColor="var(--container-color)"
+            bgColor={theme.textColor2}
+            textColor="#fff"
             text="Github"
             icon="uil uil-github-alt"
+            link={github}
           />
         </div>
       </div>
-    </div>
+    </StyledProject>
   );
 };
 

@@ -1,33 +1,36 @@
 import React from "react";
+import { useTheme } from "styled-components";
 
-import "./index.scss";
+import { StyledAbout } from "./styled-about";
 import Button from "../../components/Button";
 
 const About = () => {
+  const theme = useTheme();
   return (
-    <section id="about">
+    <StyledAbout id="about">
       <h2>About</h2>
       <p>
-        Hello! I'm Aman, a Front End Developer based in Karad, Maharashtra who
+        Hello! I'm Aman, a Front End Developer based in New Delhi, India who
         enjoys building stuff with JavaScript and React. I develop fast,
         responsive and accessible websites/web apps which perform well on all
-        devices, even on slower networks. Computers have always fascinated me.
-        I'm a dentist but I first dabbled into web development out of interest
-        in the Internet. I wanted to learn more about how everything was made
-        available so easily for anyone to access from any part of the world. I
-        started reading about web development in my final year of dentistry and
-        then actually started learning web development in internship from
-        resources like freeCodeCamp, YouTube, MDN, Reddit, Medium, etc.
+        devices. My love for coding started during covid lockdown when i started
+        learning about web development. Since then i have used any means at my
+        disposal to get better at what i do. I have used various sources like
+        Udemy, Youtube, FreeCodeCamp, Reddit, Documentations, Books etc to learn
+        about web development. Sometimes i did feel like this was something that
+        i couldn't do but overcoming these challenges was a very fun and
+        rewarding experience for me. I have enjoyed every single minute of my
+        coding journey so far and i want to keep improving myself.
       </p>
       <div className="about-btn">
         <Button
-          bgColor="var(--container-color)"
-          textColor="var(--primary-color)"
+          bgColor="#fff"
+          textColor={theme.primaryColor}
           text="Download CV"
           icon="uil uil-download-alt"
         />
       </div>
-    </section>
+    </StyledAbout>
   );
 };
 

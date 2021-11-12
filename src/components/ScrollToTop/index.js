@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./index.scss";
+import { StyledScrollToTop } from "./styled-scroll-to-top";
 
 const ScrollToTop = () => {
   return (
-    <div onClick={() => window.scrollTo(0, 0)} className="scroll">
+    <StyledScrollToTop onClick={() => window.scrollTo(0, 0)}>
       <i class="uil uil-arrow-up"></i>
-    </div>
+    </StyledScrollToTop>
   );
 };
 

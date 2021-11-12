@@ -1,8 +1,11 @@
-.mobile-navbar {
+import styled from "styled-components";
+
+export const StyledMobileNav = styled.div`
   height: 25vh;
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #fff;
   .mobile-navbar-links {
     display: flex;
     align-items: center;
@@ -13,12 +16,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: var(--title-color);
+      color: #0a192f;
       width: 6rem;
       text-decoration: none;
       i {
-        font-size: var(--icon-size);
+        font-size: ${(props) => props.theme.iconSize};
       }
     }
   }
-}
+`;

@@ -1,8 +1,10 @@
-.navbar-container {
+import styled from "styled-components";
+
+export const StyledNavbar = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: var(--container-color);
+  background-color: ${(props) => props.theme.bodyColor};
   .navbar {
     display: flex;
     justify-content: flex-end;
@@ -15,15 +17,6 @@
     @media (max-width: 500px) {
       width: 95vw;
     }
-    i {
-      margin-left: 1.5rem;
-      color: var(--title-color);
-      font-size: var(--icon-size);
-      &:hover {
-        cursor: pointer;
-        color: var(--primary-color);
-      }
-    }
     .navbar-links {
       display: flex;
       @media (max-width: 600px) {
@@ -35,12 +28,16 @@
         }
         a {
           text-decoration: none;
-          color: var(--title-color);
-          transition: 0.1s linear;
-          &:hover {
-            color: var(--primary-color);
-          }
+          color: ${(props) => props.theme.textColor1};
         }
+      }
+    }
+    i {
+      margin-left: 1.5rem;
+      color: ${(props) => props.theme.textColor1};
+      font-size: ${(props) => props.theme.iconSize};
+      &:hover {
+        cursor: pointer;
       }
     }
     .navbar-toggle {
@@ -50,4 +47,4 @@
       }
     }
   }
-}
+`;

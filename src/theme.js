@@ -7,6 +7,14 @@ export const GlobalStyles = createGlobalStyle`
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
 }
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 ul {
   list-style: none;
 }
@@ -39,11 +47,10 @@ p {
 }
 `;
 export const lightTheme = {
-  primaryColor: "hsl(250, 57%, 53%)",
-  titleColor: "hsl(250, 8%, 15%)",
-  textColor: "hsl(250, 8%, 45%)",
-  bodyColor: "hsl(250, 60%, 99%)",
-  containerColor: "#fff",
+  primaryColor: "#5a43cb",
+  textColor1: "#242329",
+  textColor2: "#6d6a7c",
+  bodyColor: "#fbfbfe",
   iconSize: "1.5rem",
   iconSizeLarge: "2.5rem",
   marginDesktop: "8rem",
@@ -56,11 +63,10 @@ export const lightTheme = {
   paddingMobile: "1.5rem",
 };
 export const darkTheme = {
-  primaryColor: "hsl(250, 30%, 8%)",
-  titleColor: "hsl(250, 8%, 95%)",
-  textColor: "hsl(250, 29%, 16%)",
-  bodyColor: "hsl(250, 28%, 12%)",
-  containerColor: "hsl(250, 29%, 16%)",
+  primaryColor: "#00818A",
+  textColor1: "#cad4f4",
+  textColor2: "#8791af",
+  bodyColor: "#0A192F",
   iconSize: "1.5rem",
   iconSizeLarge: "2.5rem",
   marginDesktop: "8rem",

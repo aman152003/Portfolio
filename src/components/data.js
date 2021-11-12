@@ -2,27 +2,49 @@ const data = [
   {
     name: "Crypto Trade",
     about:
-      "Progressive Web App (PWA) built with ReactJS & TMDb API that shows all the trending movies, their summary and even cast information, along with an option to search for specific movies. Optimized for performance.",
+      "Made using React and Coingecko api shows prices of cryptocurrencies and their data with chart. Also has a list of the trending cryptos in the last 24 hours.",
     tools: [
       "React",
       "SCSS",
       "ChartJS",
-      "Context API",
+      "Context Api",
       "React Hooks",
       "Framer Motion",
     ],
+    live: "https://cryptotrade-react-app-aman152003.netlify.app/",
+    github: "https://github.com/aman152003/crypto-trade-react-app",
   },
   {
     name: "JavaScript Calculator",
-    about:
-      "Progressive Web App (PWA) built with ReactJS & TMDb API that shows all the trending movies, their summary and even cast information, along with an option to search for specific movies. Optimized for performance.",
+    about: "A simple Calculator which can do basic Mathematical operations.",
     tools: ["HTML", "SCSS", "JavaScript"],
+    github: "https://github.com/aman152003/calculator",
+    live: "https://aman152003.github.io/calculator/",
   },
   {
     name: "Pomodoro Clock",
     about:
-      "Progressive Web App (PWA) built with ReactJS & TMDb API that shows all the trending movies, their summary and even cast information, along with an option to search for specific movies. Optimized for performance.",
-    tools: ["HTML", "SCSS", "JavaScript"],
+      "A clock that can be used to set a timer for your sessions and a break timer to let you know that you need a break.",
+    tools: ["React", "SCSS", "React Hooks", "Context Api"],
+    github: "https://github.com/aman152003/pomodor-clock",
+    live: "https://pomodoro-timer-react-app-aman152003.netlify.app/",
+  },
+  {
+    name: "MoviesDB",
+    about:
+      "Made using React and TMDB api shows list of various TV Shows and Movies along with information about them. Also has the option to create your account and make your own wishlist and favourites list.",
+    tools: [
+      "React",
+      "SCSS",
+      "React Hooks",
+      "Context Api",
+      "jsonwebtoken",
+      "Node Js",
+      "MongoDB Atlas",
+      "Mongoose",
+    ],
+    github: "https://github.com/aman152003/Movies",
+    live: "https://moviesdb-react-aman152003.netlify.app/",
   },
 ];
 

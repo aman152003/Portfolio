@@ -1,5 +1,7 @@
-.footer-container {
-  background-color: var(--primary-color);
+import styled from "styled-components";
+
+export const StyledFooter = styled.div`
+  background-color: ${(props) => props.theme.primaryColor};
   .footer {
     width: 85vw;
     margin: auto;
@@ -9,12 +11,13 @@
     justify-content: space-between;
     height: 100%;
     max-width: 1400px;
-    padding: 2rem 0rem;
+    padding: ${(props) => props.theme.paddingDesktop} 0rem;
     @media (max-width: 800px) {
       flex-direction: column;
     }
     @media (max-width: 500px) {
       width: 95vw;
+      padding: ${(props) => props.theme.paddingMobile} 0rem;
     }
     .footer-title {
       @media (max-width: 800px) {
@@ -22,9 +25,6 @@
       }
       h3 {
         font-size: 1.6rem;
-      }
-      p {
-        color: var(--container-color);
       }
     }
     .footer-links {
@@ -57,10 +57,10 @@
           margin-left: 1.5rem;
         }
         i {
-          font-size: var(--icon-size);
-          color: var(--container-color);
+          font-size: ${(props) => props.theme.iconSize};
+          color: #fff;
         }
       }
     }
   }
-}
+`;

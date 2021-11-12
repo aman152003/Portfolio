@@ -1,10 +1,10 @@
 import React from "react";
 
-import "./index.scss";
+import { StyledFooter } from "./styled-footer";
 
 const Footer = () => {
   return (
-    <div className="footer-container">
+    <StyledFooter>
       <div className="footer">
         <div className="footer-title">
           <h3>Aman</h3>
@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </StyledFooter>
   );
 };
 

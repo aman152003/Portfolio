@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import "./index.scss";
+import { StyledNavbar } from "./styled-navbar";
 import { AppContext } from "../context";
 
 const Navbar = () => {
@@ -9,16 +9,17 @@ const Navbar = () => {
     setIsDarkModeOn,
     isMobileNavToggled,
     setIsMobileNavToggled,
+    darkMode,
   } = useContext(AppContext);
   const toggleDarkMode = () => {
     setIsDarkModeOn(!isDarkModeOn);
+    localStorage.setItem("isDarkModeOn", !isDarkModeOn);
   };
   const toggleMobileNav = () => {
     setIsMobileNavToggled(!isMobileNavToggled);
-    console.log(document.body.classList);
   };
   return (
-    <div className="navbar-container">
+    <StyledNavbar>
       <div className="navbar">
         <ul className="navbar-links">
           <li>
@@ -34,8 +35,13 @@ const Navbar = () => {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <div onClick={toggleDarkMode} className="navbar-theme-switcher">
-          {isDarkModeOn ? (
+        <div
+          onClick={() => {
+            toggleDarkMode();
+          }}
+          className="navbar-theme-switcher"
+        >
+          {darkMode ? (
             <i className="uil uil-sun"></i>
           ) : (
             <i className="uil uil-moon"></i>
@@ -45,7 +51,7 @@ const Navbar = () => {
           <i className="uil uil-apps"></i>
         </div>
       </div>
-    </div>
+    </StyledNavbar>
   );
 };
 

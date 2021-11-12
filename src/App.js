@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
-import "./App.scss";
 import { AppContext } from "./components/context";
-import { GlobalStyles } from "./theme";
-import { lightTheme } from "./theme";
-import { darkTheme } from "./theme";
+import { StyledApp } from "./styled-app";
+import { GlobalStyles, lightTheme, darkTheme } from "./theme";
 import ScrollToTop from "./components/ScrollToTop";
 import MobileNav from "./components/MobileNav";
 import Navbar from "./components/Navbar";
@@ -17,11 +15,14 @@ import Contact from "./Sections/Contact";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const { isDarkModeOn } = useContext(AppContext);
+  const { isDarkModeOn, darkMode, setDarkMode } = useContext(AppContext);
+  useEffect(() => {
+    setDarkMode(JSON.parse(localStorage.getItem("isDarkModeOn")));
+  }, [isDarkModeOn]);
   return (
-    <ThemeProvider theme={isDarkModeOn ? darkTheme : lightTheme}>
-      <GlobalStyles />
-      <div className="app-container">
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+      <StyledApp>
+        <GlobalStyles />
         <ScrollToTop />
         <MobileNav />
         <Navbar />
@@ -33,7 +34,7 @@ const App = () => {
           <Contact />
         </div>
         <Footer />
-      </div>
+      </StyledApp>
     </ThemeProvider>
   );
 };

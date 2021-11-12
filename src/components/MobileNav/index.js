@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 
-import "./index.scss";
+import { StyledMobileNav } from "./styled-mobile-nav";
 import { AppContext } from "../context";
 
 const MobileNav = () => {
   const { isMobileNavToggled } = useContext(AppContext);
   return (
-    <div
+    <StyledMobileNav
       style={isMobileNavToggled ? { display: "flex" } : { display: "none" }}
-      className="mobile-navbar"
     >
       <ul className="mobile-navbar-links">
         <li>
@@ -32,7 +31,7 @@ const MobileNav = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </StyledMobileNav>
   );
 };
 

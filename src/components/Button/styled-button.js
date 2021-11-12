@@ -1,4 +1,5 @@
-.cta-btn {
+import styled from "styled-components";
+export const StyledButton = styled.a`
   outline: none;
   border: none;
   display: flex;
@@ -17,4 +18,4 @@
   i {
     font-size: var(--icon-size);
   }
-}
+`;

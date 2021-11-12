@@ -4,6 +4,7 @@ export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isDarkModeOn, setIsDarkModeOn] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const [isMobileNavToggled, setIsMobileNavToggled] = useState(false);
   return (
     <AppContext.Provider
@@ -12,6 +13,8 @@ export const AppProvider = ({ children }) => {
         setIsDarkModeOn,
         isMobileNavToggled,
         setIsMobileNavToggled,
+        darkMode,
+        setDarkMode,
       }}
     >
       {children}
