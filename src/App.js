@@ -18,6 +18,7 @@ const App = () => {
   const { isDarkModeOn, darkMode, setDarkMode } = useContext(AppContext);
   useEffect(() => {
     setDarkMode(JSON.parse(localStorage.getItem("isDarkModeOn")));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isDarkModeOn]);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
