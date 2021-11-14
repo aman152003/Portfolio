@@ -11,17 +11,18 @@ const Skills = () => {
           <li>HTML</li>
           <li>CSS</li>
           <li>SCSS</li>
-          <li>Bootstrap</li>
           <li>JavaScript (ES6+)</li>
           <li>React</li>
+          <li>Bootstrap</li>
+          <li>Responsive Design</li>
         </ul>
         <ul className="skills-list-right">
-          <li>Responsive Design</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>MongoDB</li>
           <li>Material Ui</li>
           <li>Styled Components</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>MongoDB</li>
+          <li>Version Control - Git</li>
         </ul>
       </div>
     </StyledSkills>

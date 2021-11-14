@@ -11,23 +11,8 @@ const data = [
       "React Hooks",
       "Framer Motion",
     ],
-    live: "https://cryptotrade-react-app-aman152003.netlify.app/",
+    live: "https://cryptotrade-react.netlify.app",
     github: "https://github.com/aman152003/crypto-trade-react-app",
-  },
-  {
-    name: "JavaScript Calculator",
-    about: "A simple Calculator which can do basic Mathematical operations.",
-    tools: ["HTML", "SCSS", "JavaScript"],
-    github: "https://github.com/aman152003/calculator",
-    live: "https://aman152003.github.io/calculator/",
-  },
-  {
-    name: "Pomodoro Clock",
-    about:
-      "A clock that can be used to set a timer for your sessions and a break timer to let you know that you need a break.",
-    tools: ["React", "SCSS", "React Hooks", "Context Api"],
-    github: "https://github.com/aman152003/pomodor-clock",
-    live: "https://pomodoro-timer-react-app-aman152003.netlify.app/",
   },
   {
     name: "MoviesDB",
@@ -44,7 +29,22 @@ const data = [
       "Mongoose",
     ],
     github: "https://github.com/aman152003/Movies",
-    live: "https://moviesdb-react-aman152003.netlify.app/",
+    live: "https://moviesdb-react-aman.netlify.app",
+  },
+  {
+    name: "JavaScript Calculator",
+    about: "A simple Calculator which can do basic Mathematical operations.",
+    tools: ["HTML", "SCSS", "JavaScript"],
+    github: "https://github.com/aman152003/calculator",
+    live: "https://aman152003.github.io/calculator/",
+  },
+  {
+    name: "Pomodoro Clock",
+    about:
+      "A clock that can be used to set a timer for your sessions and a break timer to let you know that you need a break.",
+    tools: ["React", "SCSS", "React Hooks", "Context Api"],
+    github: "https://github.com/aman152003/pomodor-clock",
+    live: "https://pomodoro-timer-react-aman.netlify.app",
   },
 ];
 
